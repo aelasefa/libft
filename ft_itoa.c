@@ -6,7 +6,7 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:32:07 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/25 15:36:28 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/10/27 13:25:08 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,13 @@ int	ft_count_nb(long n)
 	int	i;
 
 	i = 0;
+	if (n == 0)
+		i++;
+	else if (n < 0)
+	{
+		i++;
+		n *= -1;
+	}
 	while (n > 0)
 	{
 		i++;
@@ -53,17 +60,16 @@ char	*ft_itoa(int n)
 	long	nn;
 
 	nn = n;
-	arr = malloc(sizeof(char) * ft_count_nb(nn));
+	i = 0;
+	arr = malloc(sizeof(char) * ft_count_nb(nn) + 1);
 	if (!arr)
 		return (NULL);
 	if (nn == 0)
-		return ("0");
-	i = 0;
+		arr[i++] = '0';
 	if (n < 0)
 	{
-		arr[0] = '-';
+		arr[i++] = '-';
 		nn *= -1;
-		i++;
 	}
 	while (nn > 0)
 	{
@@ -71,5 +77,6 @@ char	*ft_itoa(int n)
 		nn /= 10;
 		i++;
 	}
+	arr[i] = '\0';
 	return (ft_rev(arr));
 }
