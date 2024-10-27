@@ -6,20 +6,20 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 15:25:41 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/26 17:39:55 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/10/27 09:36:35 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_words(char const *s, char sep)
+static int	ft_count_words(char const *s, char sep)
 {
 	int	i;
 	int	next;
 	int	count;
 
 	i = 0;
-	Next = 1;
+	next = 1;
 	count = 0;
 	while (s[i])
 	{
@@ -38,7 +38,7 @@ int	ft_count_words(char const *s, char sep)
 	return (count);
 }
 
-char	**array_with_words(char **array, char const *str, char c)
+static char	**array_with_words(char **array, char const *str, char c)
 {
 	int	index;
 	int	i;
@@ -62,6 +62,16 @@ char	**array_with_words(char **array, char const *str, char c)
 	return (array);
 }
 
+static void	ft_free(char **arr)
+{
+	size_t	i;
+
+	i = 0;
+	while (arr[i])
+		free(arr[i++]);
+	free(arr);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -69,5 +79,10 @@ char	**ft_split(char const *s, char c)
 
 	count = ft_count_words(s, c);
 	array = malloc(sizeof(char *) * count + 1);
-	return (array_with_words(array, s, c));
+	if (!array_with_words(array, s, c))
+	{
+		ft_free(array);
+		return (NULL);
+	}
+	return (array);
 }
