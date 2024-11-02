@@ -6,13 +6,13 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 13:13:58 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/25 11:07:54 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/02 12:19:29 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+static char	*ft_strcpy(char *dst, const char *src)
 {
 	int	i;
 

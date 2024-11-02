@@ -18,7 +18,7 @@ OBJSB := $(SRCSB:.c=.o)
 
 AR = ar rcs
 
-CC = gcc
+CC = cc
 
 CFLAGC := -Wall -Wextra -Werror
 

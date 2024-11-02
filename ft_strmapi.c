@@ -6,13 +6,13 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 11:29:01 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/11/02 12:06:24 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/02 12:20:03 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_new(size_t size)
+static char	*ft_new(size_t size)
 {
 	char	*new_str;
 

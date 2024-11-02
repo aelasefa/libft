@@ -6,13 +6,13 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/26 07:54:13 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/26 17:41:57 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/02 12:20:44 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_check(char const *str, char const c)
+static int	ft_check(char const *str, char const c)
 {
 	int	i;
 
@@ -28,7 +28,7 @@ int	ft_check(char const *str, char const c)
 	return (0);
 }
 
-char	*new(size_t len)
+static char	*new(size_t len)
 {
 	char	*new_str;
 
