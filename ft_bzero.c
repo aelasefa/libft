@@ -6,7 +6,7 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/23 11:16:00 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/23 11:52:51 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/10/28 18:47:45 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*b;
-	size_t	i;
+	unsigned char	*b;
+	size_t			i;
 
-	b = s;
+	b = (unsigned char *)s;
 	i = 0;
 	while (i < n)
 	{
