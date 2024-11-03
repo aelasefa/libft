@@ -6,16 +6,14 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:25:30 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/11/02 12:18:32 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/03 18:05:57 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <string.h>
 # include <stddef.h>
 
 typedef struct s_list
