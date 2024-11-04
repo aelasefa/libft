@@ -6,22 +6,29 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 19:11:21 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/29 20:51:17 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/03 19:34:37 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static int	check(int a)
+{
+	if (a < 0)
+		return (0);
+	return (-1);
+}
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	result;
-	int	signe;
+	int				i;
+	unsigned long	result;
+	int				signe;
 
 	i = 0;
 	signe = 1;
 	result = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
+	while (str[i] != '\0' && (str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
 	if (str[i] == '+' || str[i] == '-')
 	{
@@ -31,6 +38,8 @@ int	ft_atoi(const char *str)
 	}
 	while (str[i] >= '0' && str[i] <= '9')
 	{
+		if (((result * 10) + (str[i] - '0')) > 9223372036854775807)
+			return (check(signe));
 		result = result * 10 + str[i] - '0';
 		i++;
 	}
