@@ -6,7 +6,7 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 14:54:51 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/25 09:29:48 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/04 19:23:13 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t count, size_t size)
 {
 	void	*arr;
 
+	if (size != 0 && (count * size > SIZE_MAX))
+		return (NULL);
 	arr = malloc(count * size);
 	if (!arr)
 		return (NULL);
