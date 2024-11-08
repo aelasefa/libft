@@ -6,7 +6,7 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/25 15:41:18 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/25 15:44:11 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/06 22:45:14 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int	i;
 
+	if (!s || fd < 0)
+		return ;
 	i = 0;
 	while (s[i] != '\0')
 	{

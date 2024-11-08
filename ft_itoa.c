@@ -6,13 +6,13 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/24 18:32:07 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/10/29 12:47:14 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/06 12:59:59 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_count_nb(long n)
+static int	ft_count_nb(long n)
 {
 	int	i;
 
@@ -32,7 +32,7 @@ int	ft_count_nb(long n)
 	return (i);
 }
 
-char	*ft_rev(char *str)
+static char	*ft_rev(char *str)
 {
 	int		i;
 	int		j;

@@ -20,15 +20,15 @@ AR = ar rcs
 
 CC = cc
 
-CFLAGC := -Wall -Wextra -Werror
+CFLAGS := -Wall -Wextra -Werror
+
+all : $(NAME)
 
 $(NAME) : $(OBJS)
 		$(AR) $(NAME) $(OBJS)
 
 %.o : %.c libft.h
 		$(CC) $(CFLAGS) -c  $<
-
-all : $(NAME)
 
 clean :
 	rm -f $(OBJS) $(OBJSB)
@@ -41,4 +41,4 @@ bonus : $(OBJSB)
 
 re : fclean all
 
-.PHONY : clean fclean re all
+.PHONY 	: bonus all clean fclean re

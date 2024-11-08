@@ -6,7 +6,7 @@
 /*   By: ayelasef <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 10:25:30 by ayelasef          #+#    #+#             */
-/*   Updated: 2024/11/04 19:32:37 by ayelasef         ###   ########.fr       */
+/*   Updated: 2024/11/05 18:13:08 by ayelasef         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stddef.h>
-# include <limits.h>
 
 typedef struct s_list
 {
