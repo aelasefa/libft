@@ -41,4 +41,4 @@ bonus : $(OBJSB)
 
 re : fclean all
 
-.PHONY 	: bonus all clean fclean re
+.PHONY 	: clean
