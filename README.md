@@ -32,4 +32,4 @@ To get started with `libft`, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/libft.git
+   git clone https://github.com/aelasefa/libft.git
